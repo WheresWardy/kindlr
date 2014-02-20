@@ -1,0 +1,6 @@
+email: https://pypi.python.org/pypi/mailtools
+
+Ideas
+- Add config option for limiting MOBI size (don't send if over 20MB)
+- Parser API spec should return metadata as well (author, URL, domain etc.)
+- Have calibre be a submodule checkout? (Linux 32-bit, Linux 64-bit, Mac OS X etc.)

@@ -1,0 +1,18 @@
+BeautifulSoup==3.2.1
+Flask==0.10.1
+Jinja2==2.7.2
+MarkupSafe==0.18
+Pillow==2.3.0
+PyYAML==3.10
+Werkzeug==0.9.4
+beautifulsoup4==4.3.2
+cssselect==0.9.1
+gunicorn==18.0
+html5lib==0.999
+itsdangerous==0.23
+lxml==3.3.0
+-e git+https://github.com/WheresWardy/newspaper.git@cc85b8d999368ea2534d4e0556b8bd931a93572a#egg=newspaper-master
+nltk==2.0.4
+requests==2.2.1
+six==1.5.2
+wsgiref==0.1.2
