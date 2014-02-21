@@ -1,0 +1,4 @@
+[submodule "calibre"]
+	path = calibre
+	url = git://github.com/WheresWardy/calibre.git
+	branch = linux-x86_64
