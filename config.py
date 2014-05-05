@@ -11,7 +11,6 @@ class Config:
 		self.parser = os.getenv('PARSER', 'newspaper')
 		self.token = os.getenv('TOKEN', '')
 		self.strip_images = os.getenv('STRIP_IMAGES', False)
-
 		self.readability = Readability()
 
 class Readability:

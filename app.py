@@ -30,22 +30,32 @@ app = Flask(__name__)
 # Environment-based options
 if config.environment == "development":
 	app.debug = True
+elif config.environment == "test":
+	app.testing = True
 
 # Write errors to stderr
 def stderr(message):
 	sys.stderr.write(message + "\n")
+
+# Return the current environment
+def environment():
+	return config.environment
 
 # Authenticate a request against the environment token
 def authenticate(token):
 	if config.token == "" or token != config.token:
 		stderr("Token empty or invalid")
 		abort(403)
+	else:
+		return True
 
 # Check if a request needs rate limiting
 def limit():
 	if bucket.limit(request.remote_addr):
 		stderr("Request was rate limited")
 		abort(403)
+	else:
+		return False
 
 @app.route('/')
 def index():
