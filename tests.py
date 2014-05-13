@@ -18,10 +18,10 @@ class AppTestCase(unittest.TestCase):
 		pass
 
 	def test_environment(self):
-		assert app.environment() == 'test', "environment should be test"
+		self.assertEqual(app.environment(), 'test')
 
 	def test_authenticate(self):
-		assert app.authenticate(os.getenv('TOKEN'))
+		self.assertTrue(app.authenticate(os.getenv('TOKEN')))
 
 if __name__ == "__main__":
 	unittest.main()
