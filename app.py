@@ -87,7 +87,7 @@ def preview(token=None, url=None):
 	else:
 		content = article.content
 
-	print article.content
+	print(article.content)
 
 	return render_template('preview.html.jinja', article=content), status
 
